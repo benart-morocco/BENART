@@ -125,8 +125,8 @@
       object-fit:contain;
       border-radius:8px;
       background:#000;
-      box-shadow:none !important;
-      filter:url(#remove-logo-glow) !important;
+      box-shadow:none;
+      filter:none;
     }
 
     .brand span{
@@ -243,6 +243,7 @@
       width:100%;
       height:100%;
       object-fit:cover;
+      filter:none;
     }
 
     .hero-image.logo{
@@ -250,7 +251,7 @@
       align-items:center;
       justify-content:center;
       padding:34px;
-      box-shadow:none !important;
+      box-shadow:none;
       background:#000;
       border:1px solid rgba(255,255,255,.12);
     }
@@ -261,8 +262,8 @@
 
     .hero-image.logo img{
       object-fit:contain;
-      filter:url(#remove-logo-glow) !important;
-      box-shadow:none !important;
+      filter:none;
+      box-shadow:none;
     }
 
     .hero-title{
@@ -581,8 +582,7 @@
       header,
       .hero,
       .floating-export,
-      .progress,
-      svg{
+      .progress{
         display:none !important;
       }
 
@@ -631,17 +631,6 @@
 </head>
 
 <body>
-
-<svg width="0" height="0" style="position:absolute">
-  <filter id="remove-logo-glow" color-interpolation-filters="sRGB">
-    <feColorMatrix type="saturate" values="0"/>
-    <feComponentTransfer>
-      <feFuncR type="discrete" tableValues="0 0 0 0 0 1 1"/>
-      <feFuncG type="discrete" tableValues="0 0 0 0 0 1 1"/>
-      <feFuncB type="discrete" tableValues="0 0 0 0 0 1 1"/>
-    </feComponentTransfer>
-  </filter>
-</svg>
 
 <div class="progress" id="progress"></div>
 
